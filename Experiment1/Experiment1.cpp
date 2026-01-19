@@ -12,7 +12,7 @@ void complexRec(int n) {
    if (n <= 2) {
        return;
    }
-   
+
     if (i==0) {
         depth++;
     }
