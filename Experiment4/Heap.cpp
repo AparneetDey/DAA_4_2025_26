@@ -65,6 +65,14 @@ void deletion(int i)
     cout << "Value: " << val << endl;
 }
 
+int search(int val) {
+    for(int i=0; i<heapSize; i++) {
+        if(val == heap[i]) return i;
+    }
+
+    return -1;
+}
+
 int main()
 {
     insert(4);
@@ -79,11 +87,14 @@ int main()
         cout << heap[i] << " ";
     }
     cout<<endl;
+    cout<<"Index: "<<search(4)<<endl;
     deletion(0);
     insert(1);
     deletion(3);
+    cout<<"Index: "<<search(1)<<endl;
     deletion(2);
     insert(4);
+    cout<<"Index: "<<search(0)<<endl;
     deletion(5);
 
     for (int i = 0; i < heapSize; i++)
